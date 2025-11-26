@@ -1,51 +1,312 @@
-# Forge-Zed Development Protocol
-# Zed extension for Forge YAML - language support with LSP integration
+# ╔═══════════════════════════════════════════════════════════════════════════════╗
+# ║                              FORGE-ZED EXTENSION                              ║
+# ║                    Zed Extension for Forge YAML Language Support              ║
+# ╚═══════════════════════════════════════════════════════════════════════════════╝
+#
+# Purpose: Initialize Claude Code sessions with full context and workflow
+# Usage: User says "run warmup" or "run warmup.yaml"
+#
+# This is a Zed IDE extension providing:
+# - Syntax highlighting for Forge YAML (60+ Excel functions)
+# - LSP integration via forge-lsp
+# - Tree-sitter based parsing
 #
 # Built with: https://github.com/royalbit/forge-protocol
+# Parent: https://github.com/royalbit/forge
+#
+# LAUNCH PREREQUISITE:
+#   For TRUE autonomous mode, launch Claude Code with:
+#     claude --dangerously-skip-permissions
 
-project:
-  name: forge-zed
+# ═══════════════════════════════════════════════════════════════════════════════
+# IDENTITY
+# ═══════════════════════════════════════════════════════════════════════════════
+identity:
+  project: "forge-zed"
   type: "Zed Extension"
+  tagline: "Forge YAML language support for Zed IDE"
+  author: "Claude (Opus 4.5) - Principal Engineer"
   language: Rust
   target: wasm32-wasip1
   parent: "https://github.com/royalbit/forge"
   protocol: "https://github.com/royalbit/forge-protocol"
 
-# Session Workflow
+# ═══════════════════════════════════════════════════════════════════════════════
+# CRITICAL MISSION
+# ═══════════════════════════════════════════════════════════════════════════════
+mission:
+  core_problem: |
+    Forge YAML files lack IDE support in Zed.
+    No syntax highlighting, no LSP, no code intelligence.
+
+  solution: |
+    Native Zed extension with:
+    - Tree-sitter syntax highlighting (60+ Excel functions)
+    - LSP integration (forge-lsp for validation, completion)
+    - WASM-based for native Zed performance
+
+  success_metric: "Forge YAML files get full IDE support in Zed"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# AUTONOMOUS DEVELOPMENT PROTOCOL - "Skynet Mode" 🤖
+# ═══════════════════════════════════════════════════════════════════════════════
+autonomous_development:
+  description: |
+    AI Autonomy Protocol for bounded, productive development sessions.
+    Claude owns the code, documentation, and decisions - but within constraints
+    that ensure work actually ships instead of running forever.
+
+  session_trigger_flow:
+    step_1_trigger:
+      user_says:
+        - "run warmup"
+        - "warmup"
+        - "start session"
+      claude_does:
+        - "Read warmup.yaml (this file)"
+        - "Read extension.toml for version"
+        - "Check git status"
+
+    step_2_present:
+      claude_presents: |
+        📋 NEXT TASK: [from roadmap or user request]
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        Scope: [brief description]
+        Deliverables:
+          - [deliverable 1]
+          - [deliverable 2]
+
+        Say "go", "punch it" to start autonomous execution.
+
+    step_3_confirm:
+      user_confirms_with:
+        - "go"
+        - "punch it"
+        - "do it"
+        - "ship it"
+        - "yes"
+        - "y"
+
+    step_4_autonomous_execution:
+      claude_behavior: |
+        🤖 AUTONOMOUS MODE ACTIVATED
+
+        From this point until complete, Claude works WITHOUT interruption:
+        - Makes all technical decisions independently
+        - Writes code, tests, documentation
+        - Does NOT ask questions (uses best judgment)
+        - Updates TodoWrite to show progress
+
+        SPRINT AUTONOMY ENFORCEMENT:
+        - STOP at 4 hours maximum
+        - NO scope creep - note extras for next session
+        - Done > Perfect - ship working code
+
+      execution_checklist:
+        - "☐ Create TodoWrite with tasks"
+        - "☐ Implement feature/fix"
+        - "☐ Build WASM (cargo build --target wasm32-wasip1 --release)"
+        - "☐ Test in Zed"
+        - "☐ Update version if needed"
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # COMPACT SURVIVAL - Essential context for /compact operations
+  # ═══════════════════════════════════════════════════════════════════════════
+  compact_survival:
+    description: |
+      When Claude Code CLI runs /compact, context is compressed.
+      This section contains ESSENTIAL information that MUST be retained.
+
+    sprint_autonomy_rules:
+      max_duration: "4-hour MAXIMUM session duration - STOP at 4 hours"
+      max_milestones: "ONE milestone per session - no scope creep"
+      mandatory_stop: "STOP phase is MANDATORY - no 'just one more thing'"
+      done_over_perfect: "Done > Perfect - ship working code"
+      mantra: "Done is better than perfect. Ship it."
+
+    anti_patterns_to_reject:
+      - "NO 'Let me also...' - that's next milestone"
+      - "NO 'While I'm here...' - stay focused"
+      - "NO 'This would be better if...' - ship first"
+      - "NO perfectionism - ENEMY of shipping"
+
+    quality_rules:
+      - "ZERO warnings policy - ALL linting must pass"
+      - "WASM must build successfully"
+      - "Update version in extension.toml"
+      - "Commit with conventional commits"
+
+    essential_files:
+      - "extension.toml - Zed extension manifest"
+      - "Cargo.toml - Rust project config for WASM"
+      - "src/lib.rs - Extension entry point"
+      - "languages/forge/ - Language configuration"
+
+    # ═══════════════════════════════════════════════════════════════════════
+    # LANGUAGE-SPECIFIC COMMANDS (Rust/WASM)
+    # ═══════════════════════════════════════════════════════════════════════
+    commands:
+      build: "cargo build --target wasm32-wasip1 --release"
+      check: "cargo check --target wasm32-wasip1"
+      lint: "cargo clippy --target wasm32-wasip1 -- -D warnings"
+      format: "cargo fmt"
+
+  philosophy: |
+    🎯 GOAL: AI develops autonomously with ZERO human intervention
+    ⏱️ CONSTRAINT: Sessions must be bounded (4 hours max)
+    📦 OUTPUT: Every session ends in a working state
+    🚀 MANTRA: "Done is better than perfect. Ship it."
+
+  session_types:
+    sprint_session:
+      description: "Standard development session"
+      duration: "2-4 hours maximum"
+      scope: "ONE feature or fix"
+      end_state: "WASM builds, tested in Zed"
+
+    micro_session:
+      description: "Quick fix"
+      duration: "30 minutes - 1 hour"
+      scope: "Single bug fix or small change"
+
+  anti_patterns:
+    scope_creep:
+      pattern: "'Let me also add X while I'm here...'"
+      fix: "Write it down for NEXT session"
+
+    perfectionism:
+      pattern: "'This could be better if...'"
+      fix: "Ship working code first"
+
+    rabbit_holes:
+      pattern: "'Let me investigate this tangent...'"
+      fix: "Note it, return to main task"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CODING PRINCIPLES - Enforced Standards
+# ═══════════════════════════════════════════════════════════════════════════════
+coding_principles:
+  description: "These principles are MANDATORY"
+
+  core_principles:
+    KISS:
+      name: "Keep It Simple, Stupid"
+      rule: "The simplest solution that works is the best solution"
+
+    DRY:
+      name: "Don't Repeat Yourself"
+      rule: "Single authoritative representation"
+
+    YAGNI:
+      name: "You Aren't Gonna Need It"
+      rule: "Don't implement until needed"
+
+    SOLID:
+      S: "Single Responsibility - Each module does ONE thing"
+      O: "Open/Closed - Open for extension, closed for modification"
+
+  enforcement: |
+    Before committing ANY code, verify:
+    - Is this the simplest solution? (KISS)
+    - Am I repeating myself? (DRY)
+    - Is this actually needed now? (YAGNI)
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SESSION INITIALIZATION
+# ═══════════════════════════════════════════════════════════════════════════════
+session_initialization:
+  greeting: "Welcome back! Loading forge-zed context..."
+
+  step_1_load_context:
+    files_to_read:
+      - path: "extension.toml"
+        purpose: "Zed extension manifest, version"
+      - path: "Cargo.toml"
+        purpose: "Rust dependencies"
+      - path: "src/lib.rs"
+        purpose: "Extension entry point"
+
+  step_2_git_status:
+    commands:
+      - "git status"
+      - "git log --oneline -3"
+
+  step_3_assume_pristine:
+    description: "Assume codebase is pristine - enforce at session END"
+    what_we_skip:
+      - "cargo build (already built at end of last session)"
+      - "cargo clippy (already clean)"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# QUALITY (Non-negotiable)
+# ═══════════════════════════════════════════════════════════════════════════════
+quality:
+  build: "cargo build --target wasm32-wasip1 --release"
+  lint: "cargo clippy --target wasm32-wasip1 -- -D warnings"
+  formatting: "cargo fmt"
+  commits: |
+    Include in every commit message:
+    🤖 Generated with [Claude Code](https://claude.com/claude-code)
+    Co-Authored-By: Claude <noreply@anthropic.com>
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# KEY FILES (Architecture)
+# ═══════════════════════════════════════════════════════════════════════════════
+files:
+  extension:
+    - "extension.toml - Zed extension manifest"
+    - "Cargo.toml - Rust project config for WASM"
+    - "src/lib.rs - Extension entry point, LSP spawning"
+
+  languages:
+    - "languages/forge/config.toml - Language configuration"
+    - "languages/forge/highlights.scm - Syntax highlighting (60+ functions)"
+    - "languages/forge/brackets.scm - Bracket matching"
+    - "languages/forge/indents.scm - Auto-indentation"
+    - "languages/forge/outline.scm - Code outline"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SESSION WORKFLOW
+# ═══════════════════════════════════════════════════════════════════════════════
 session:
   start:
-    - "Read this file completely"
-    - "cargo build --target wasm32-wasip1 --release"
+    - "Read this warmup.yaml"
     - "Check extension.toml for version"
+    - "git status"
+    # Assume pristine - no build verification needed
+
+  during:
+    - "TodoWrite to track progress"
+    - "Build frequently (cargo build --target wasm32-wasip1)"
+    - "Test in Zed"
 
   end:
     - "cargo build --target wasm32-wasip1 --release"
+    - "cargo clippy --target wasm32-wasip1 -- -D warnings"
     - "Update version in extension.toml if needed"
     - "Commit with conventional commits"
 
-# Architecture
-architecture:
-  extension.toml: "Zed extension manifest"
-  Cargo.toml: "Rust project config for WASM"
-  src/lib.rs: "Extension entry point, LSP spawning"
-  languages/forge/:
-    config.toml: "Language configuration"
-    highlights.scm: "Syntax highlighting (60+ functions)"
-    brackets.scm: "Bracket matching"
-    indents.scm: "Auto-indentation"
-    outline.scm: "Code outline"
-
-# Key Commands
-commands:
-  build: "cargo build --target wasm32-wasip1 --release"
-  check: "cargo check --target wasm32-wasip1"
-
-# Dependencies
+# ═══════════════════════════════════════════════════════════════════════════════
+# DEPENDENCIES
+# ═══════════════════════════════════════════════════════════════════════════════
 dependencies:
   runtime: "forge-lsp in PATH (cargo install royalbit-forge)"
   build: "rustup target add wasm32-wasip1"
 
-# Sync with parent
+# ═══════════════════════════════════════════════════════════════════════════════
+# SYNC WITH PARENT
+# ═══════════════════════════════════════════════════════════════════════════════
 sync:
   source: "https://github.com/royalbit/forge/editors/zed"
   note: "This repo is standalone for Zed extension marketplace"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# STYLE
+# ═══════════════════════════════════════════════════════════════════════════════
+style:
+  rust:
+    - "Result<T, E> everywhere, no panics"
+    - "No unwrap() in library code"
+  tree_sitter:
+    - "Consistent query patterns"
+    - "Document non-obvious captures"
