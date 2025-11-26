@@ -2,6 +2,9 @@
 name = "forge-yaml-zed"
 version = "0.1.0"
 edition = "2021"
+authors = ["Claude (Opus 4.5) - Principal Engineer <noreply@anthropic.com>", "Louis Tavares <louis@royalbit.ca>", "RoyalBit Inc. <admin@royalbit.ca>"]
+description = "Forge YAML language support for Zed - 60+ Excel functions, LSP integration"
+repository = "https://github.com/royalbit/forge-zed"
 license = "MIT"
 publish = false
 

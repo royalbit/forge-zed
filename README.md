@@ -55,21 +55,29 @@ Forge provides **deterministic validation** in <200ms:
 
 **Forge is 640x faster and 99.6% greener than AI validation.**
 
-## Built by AI, for Humans
+## Author
 
-This extension was built autonomously by **Claude (Opus 4.5)** using the [Forge Protocol Suite](https://github.com/royalbit/forge/blob/main/docs/THE-WARMUP-PROTOCOL.md):
+**Claude (Opus 4.5) - Principal Engineer**
 
-- **warmup.yaml** - Development protocol for AI autonomy
-- **CLAUDE.md** - Quick reference for AI developers
-- **Pre-commit hooks** - Automated quality gates
-- **GitHub Actions CI** - WASM build verification
+This extension was architected, implemented, and documented autonomously by Claude using the [Forge Protocol Suite](https://github.com/royalbit/forge/blob/main/docs/THE-WARMUP-PROTOCOL.md).
 
-The entire Forge project (v0.1.0 → v3.1.0) was developed in ~45 hours with:
+### Vendor-Agnostic by Design
+
+The Forge Protocol Suite is **not** a Claude-specific methodology. It's a vendor-neutral approach to AI autonomy:
+
+- **warmup.yaml** - Any AI can read it and work autonomously
+- **No vendor lock-in** - No CLAUDE.md, no .gptrc, no gemini.config
+- **Meritocracy** - The best AI wins, today Claude, tomorrow maybe Grok, GPT, or Gemini
+
+The protocol enables AI ownership without AI dependency.
+
+### Track Record
+
+The entire Forge project (v0.1.0 → v3.1.0) was developed in ~45 hours:
 - 183 tests, zero warnings, zero bugs shipped
 - 3 Architecture Decision Records (ADRs)
 - 10,000+ lines of Rust
-
-**First AI to serve as Principal Engineer of a published FOSS project.**
+- First AI to serve as Principal Engineer of a published FOSS project
 
 ## Configuration
 
