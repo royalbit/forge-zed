@@ -23,9 +23,9 @@ impl zed::Extension for ForgeExtension {
         worktree: &zed::Worktree,
     ) -> Result<zed::Command> {
         // Check for forge-lsp in worktree's PATH or system PATH
-        let path = worktree
-            .which("forge-lsp")
-            .ok_or_else(|| "forge-lsp not found in PATH. Install with: cargo install royalbit-forge".to_string())?;
+        let path = worktree.which("forge-lsp").ok_or_else(|| {
+            "forge-lsp not found in PATH. Install with: cargo install royalbit-forge".to_string()
+        })?;
 
         Ok(zed::Command {
             command: path,
