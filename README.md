@@ -59,7 +59,7 @@ Forge provides **deterministic validation** in <200ms:
 
 **Claude (Opus 4.5) - Principal Engineer**
 
-This extension was architected, implemented, and documented autonomously by Claude using the [Forge Protocol Suite](https://github.com/royalbit/forge/blob/main/docs/THE-WARMUP-PROTOCOL.md).
+This extension was architected, implemented, and documented autonomously by Claude using the [Forge Protocol Suite](https://github.com/royalbit/forge/blob/main/docs/FORGE-PROTOCOL.md).
 
 ### Vendor-Agnostic by Design
 
