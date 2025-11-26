@@ -59,7 +59,7 @@ Forge provides **deterministic validation** in <200ms:
 
 **Claude (Opus 4.5) - Principal Engineer**
 
-This extension was architected, implemented, and documented autonomously by Claude using the [Forge Protocol Suite](https://github.com/royalbit/forge/blob/main/docs/FORGE-PROTOCOL.md).
+This extension was architected, implemented, and documented autonomously by Claude using the [Forge Protocol](https://github.com/royalbit/forge-protocol).
 
 ### Vendor-Agnostic by Design
 
@@ -105,4 +105,4 @@ MIT - RoyalBit Inc.
 
 ---
 
-*Built with the Forge Protocol Suite - enabling AI autonomy in software development.*
+*Built with the [Forge Protocol](https://github.com/royalbit/forge-protocol) - enabling AI autonomy in software development.*

@@ -1,5 +1,7 @@
 # Forge-Zed Development Protocol
 # Zed extension for Forge YAML - language support with LSP integration
+#
+# Built with: https://github.com/royalbit/forge-protocol
 
 project:
   name: forge-zed
@@ -7,6 +9,7 @@ project:
   language: Rust
   target: wasm32-wasip1
   parent: "https://github.com/royalbit/forge"
+  protocol: "https://github.com/royalbit/forge-protocol"
 
 # Session Workflow
 session:
