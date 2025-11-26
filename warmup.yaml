@@ -1,0 +1,48 @@
+# Forge-Zed Development Protocol
+# Zed extension for Forge YAML - language support with LSP integration
+
+project:
+  name: forge-zed
+  type: "Zed Extension"
+  language: Rust
+  target: wasm32-wasip1
+  parent: "https://github.com/royalbit/forge"
+
+# Session Workflow
+session:
+  start:
+    - "Read this file completely"
+    - "cargo build --target wasm32-wasip1 --release"
+    - "Check extension.toml for version"
+
+  end:
+    - "cargo build --target wasm32-wasip1 --release"
+    - "Update version in extension.toml if needed"
+    - "Commit with conventional commits"
+
+# Architecture
+architecture:
+  extension.toml: "Zed extension manifest"
+  Cargo.toml: "Rust project config for WASM"
+  src/lib.rs: "Extension entry point, LSP spawning"
+  languages/forge/:
+    config.toml: "Language configuration"
+    highlights.scm: "Syntax highlighting (60+ functions)"
+    brackets.scm: "Bracket matching"
+    indents.scm: "Auto-indentation"
+    outline.scm: "Code outline"
+
+# Key Commands
+commands:
+  build: "cargo build --target wasm32-wasip1 --release"
+  check: "cargo check --target wasm32-wasip1"
+
+# Dependencies
+dependencies:
+  runtime: "forge-lsp in PATH (cargo install royalbit-forge)"
+  build: "rustup target add wasm32-wasip1"
+
+# Sync with parent
+sync:
+  source: "https://github.com/royalbit/forge/editors/zed"
+  note: "This repo is standalone for Zed extension marketplace"
