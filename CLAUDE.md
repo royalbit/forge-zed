@@ -1,5 +1,8 @@
 # Forge-Zed
 
+@warmup.yaml
+@ethics.yaml
+
 ON CONFUSION → re-read warmup.yaml + .claude_checkpoint.yaml
 
 Rules: 4hr max, 1 milestone, WASM builds, ship it.
