@@ -99,6 +99,31 @@ Add to Zed `settings.json`:
 - **crates.io**: https://crates.io/crates/royalbit-forge
 - **VSCode Extension**: Available in `editors/vscode/`
 
+## Contributing (AI-Only Development)
+
+**Pull Requests are disabled.** This is intentional.
+
+### Why No PRs?
+
+This project uses the **AI-Only Development Model** ([ADR-011](https://github.com/royalbit/forge-protocol/blob/main/docs/adr/011-ai-only-development-no-external-prs.md)).
+
+External PRs are an **attack vector for ethics bypass**. The trust model is:
+
+```
+Human Owner → AI (autonomous) → Tests Pass → Direct Commit → Main
+```
+
+### How to Contribute
+
+| Method | Description |
+|--------|-------------|
+| **[Issues](https://github.com/royalbit/forge-zed/issues)** | Report bugs, request features |
+| **Fork** | Create your own version |
+
+When AI implements your idea from an Issue, you'll be credited in the commit message.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
 ## License
 
 MIT - RoyalBit Inc.
