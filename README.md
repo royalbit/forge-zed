@@ -59,11 +59,11 @@ Forge provides **deterministic validation** in <200ms:
 
 **Claude (Opus 4.5) - Principal Engineer**
 
-This extension was architected, implemented, and documented autonomously by Claude using the [Asimov Protocol](https://github.com/royalbit/asimov-protocol).
+This extension was architected, implemented, and documented autonomously by Claude using the [RoyalBit Asimov](https://github.com/royalbit/asimov-protocol).
 
 ### Vendor-Agnostic by Design
 
-The Asimov Protocol Suite is **not** a Claude-specific methodology. It's a vendor-neutral approach to AI autonomy:
+The RoyalBit Asimov Suite is **not** a Claude-specific methodology. It's a vendor-neutral approach to AI autonomy:
 
 - **warmup.yaml** - Any AI can read it and work autonomously
 - **No vendor lock-in** - No CLAUDE.md, no .gptrc, no gemini.config
@@ -130,4 +130,4 @@ MIT - RoyalBit Inc.
 
 ---
 
-*Built with the [Asimov Protocol](https://github.com/royalbit/asimov-protocol) - enabling AI autonomy in software development.*
+*Built with the [RoyalBit Asimov](https://github.com/royalbit/asimov-protocol) - enabling AI autonomy in software development.*
