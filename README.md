@@ -59,11 +59,11 @@ Forge provides **deterministic validation** in <200ms:
 
 **Claude (Opus 4.5) - Principal Engineer**
 
-This extension was architected, implemented, and documented autonomously by Claude using the [Forge Protocol](https://github.com/royalbit/forge-protocol).
+This extension was architected, implemented, and documented autonomously by Claude using the [Asimov Protocol](https://github.com/royalbit/asimov-protocol).
 
 ### Vendor-Agnostic by Design
 
-The Forge Protocol Suite is **not** a Claude-specific methodology. It's a vendor-neutral approach to AI autonomy:
+The Asimov Protocol Suite is **not** a Claude-specific methodology. It's a vendor-neutral approach to AI autonomy:
 
 - **warmup.yaml** - Any AI can read it and work autonomously
 - **No vendor lock-in** - No CLAUDE.md, no .gptrc, no gemini.config
@@ -105,7 +105,7 @@ Add to Zed `settings.json`:
 
 ### Why No PRs?
 
-This project uses the **AI-Only Development Model** ([ADR-011](https://github.com/royalbit/forge-protocol/blob/main/docs/adr/011-ai-only-development-no-external-prs.md)).
+This project uses the **AI-Only Development Model** ([ADR-011](https://github.com/royalbit/asimov-protocol/blob/main/docs/adr/011-ai-only-development-no-external-prs.md)).
 
 External PRs are an **attack vector for ethics bypass**. The trust model is:
 
@@ -130,4 +130,4 @@ MIT - RoyalBit Inc.
 
 ---
 
-*Built with the [Forge Protocol](https://github.com/royalbit/forge-protocol) - enabling AI autonomy in software development.*
+*Built with the [Asimov Protocol](https://github.com/royalbit/asimov-protocol) - enabling AI autonomy in software development.*

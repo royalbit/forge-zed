@@ -11,7 +11,7 @@
 # - LSP integration via forge-lsp
 # - Tree-sitter based parsing
 #
-# Built with: https://github.com/royalbit/forge-protocol
+# Built with: https://github.com/royalbit/asimov-protocol
 # Parent: https://github.com/royalbit/forge
 #
 # LAUNCH PREREQUISITE:
@@ -48,7 +48,7 @@ self_healing:
 
   commit_cadence:
     rule: "Commit at least every 15 minutes during active development"
-    why: "Each commit triggers forge-protocol refresh, injecting fresh context"
+    why: "Each commit triggers asimov-mode refresh, injecting fresh context"
     patterns:
       - "Commit after every task completion, even if small"
       - "Small commits > large commits (for self-healing)"
@@ -91,7 +91,7 @@ identity:
   language: Rust
   target: wasm32-wasip1
   parent: "https://github.com/royalbit/forge"
-  protocol: "https://github.com/royalbit/forge-protocol"
+  protocol: "https://github.com/royalbit/asimov-protocol"
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # CRITICAL MISSION
